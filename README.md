@@ -51,24 +51,23 @@ https://github.com/becodeorg/GNT-Arai-2.31/tree/master/content/additional_resour
 ## Project process
 ### determine base accuracy
 First step of the project is to run a default Random Forest classifier over the train set and predict
-the test set. In the rest of the project I will try to better this score.  
-
+the test set. In the rest of the project I will try to better this score.
 
 | Classifier model  | Base accuracy score      |
 |------------------------|---------------------|
-| RandomForestClassifier | 0,8501320557705301  | 
+| RandomForestClassifier | 0,8504391622136233  | 
 
 Looking at the confusion matrix, it is clear that the prediction of class 1 (income higher than 50k) can 
 still do a lot better: 
 
 ![](visuals/randomforest_default_confusionmatrix.png)
 
-### ROC-curve
-![](visuals/randomforest_default_roccurve.png)
+### first improvement: cross-validation
 
-### overfitting
-As the train score is higher than the test score, there is some overfitting going on.
-![](visuals/randomforest_default_score_test_train.png)
+
+|cross validation score | standard deviation |
+|-----------------------|--------------------|
+|   85.69%              |  +/- 0.35          |
 
 
 [comment]: <> (![]&#40;visuals/Exp_24_RPM_reading_error.png&#41;)
