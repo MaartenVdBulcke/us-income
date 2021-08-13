@@ -65,9 +65,9 @@ still do a lot better:
 ### first improvement: cross-validation
 
 
-|cross validation score | standard deviation |
-|-----------------------|--------------------|
-|   85.69%              |  +/- 0.35          |
+|cross validation score | number of folds  | standard deviation |
+|-----------------------|------------------|--------------------|
+|   85.69%              |        10        |     +/- 0.35       |
 
 
 [comment]: <> (![]&#40;visuals/Exp_24_RPM_reading_error.png&#41;)
