@@ -53,6 +53,7 @@ https://github.com/becodeorg/GNT-Arai-2.31/tree/master/content/additional_resour
 First step of the project is to run a default Random Forest classifier over the train set and predict
 the test set. In the rest of the project I will try to better this score.  
 
+
 | Classifier model  | Base accuracy score      |                                                                                         |
 |------------------------|---------------------|
 | RandomForestClassifier | 0,8501320557705301  | 
