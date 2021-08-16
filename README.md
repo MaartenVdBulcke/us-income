@@ -142,15 +142,8 @@ class_weight | set type | accuracy score | roc | matthew coefficient
 | balanced| test | 0.876 | 0.823 | 0.583 |
 | balanced | test | 0.823 | 0.823 | 0.583 | 
 
-
- [[11734   701]
- [ 1585  2261]]
-matthew = 0.5852089298517635
-
-balanced
-[[10238  2197]
- [  682  3164]]
-matthew = 0.5838777362945544
+![](visuals/class_weight_None.png)
+![](visuals/class_weight_balanced.png)
 
 
 

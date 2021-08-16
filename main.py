@@ -268,6 +268,7 @@ if __name__ == '__main__':
     print(roc_auc_score(y_test, y_pred))
     plot_roc_curve(best_model, X_test, y_test)
     plt.show()
+    show_confusion_matrix(best_model, X_test, y_test, 'class_weight=None')
 
     print('class weight balanced')
     best_model = RandomForestClassifier(
@@ -283,6 +284,7 @@ if __name__ == '__main__':
     y_pred = best_model.predict(X_test)
     print_score(best_model, X_train, y_train, 'train')
     print_score(best_model, X_test, y_test, 'test')
+    show_confusion_matrix(best_model, X_test, y_test, 'class_weight=balanced')
     # # scores = cross_val_score(best_model, X_train, y_train, cv=kf)
     # # print(scores)
     # # print(scores.mean(), scores.std())
