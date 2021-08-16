@@ -1,19 +1,5 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score, SCORERS, matthews_corrcoef, make_scorer
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import plot_confusion_matrix
-from sklearn.metrics import classification_report
 from sklearn.metrics import plot_roc_curve
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import f1_score, balanced_accuracy_score
-from sklearn.model_selection import cross_val_score, GridSearchCV, \
-    train_test_split, KFold, RandomizedSearchCV, StratifiedKFold
-from imblearn.over_sampling import SMOTE
 
 from utils.evaluate import *
 from utils.dataset_manipulation import *

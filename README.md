@@ -139,12 +139,12 @@ class_weight | set type | accuracy score | roc | matthew coefficient |
 |:-----:|:--------:|:-----:|:---:|:-----:|
 |None | train | 0.902 | 0.766 | 0.585 |
 | None | test | 0.860 | 0.766 | 0.585 |
-| balanced| test | 0.876 | 0.823 | 0.583 |
+| balanced| train | 0.876 | 0.823 | 0.583 |
 | balanced | test | 0.823 | 0.823 | 0.583 | 
 
-![](visuals/class_weight_None.png)
-
+![](visuals/class_weight_None.png) 
 ![](visuals/class_weight_balanced.png)
+
 
 ## Conclusions
 * I have looked for the best hyperparameters using random and regular grid search. 
@@ -153,9 +153,7 @@ class_weight | set type | accuracy score | roc | matthew coefficient |
 ## Contributors
 | Name                  | Github                                 |
 |-----------------------|----------------------------------------|
-| Maarten Van den Bulcke           | https://github.com/MaartenVdBulcke       |
-
-
+| Maarten Van den Bulcke | https://github.com/MaartenVdBulcke       |
 
 
 ## Timeline
