@@ -93,6 +93,7 @@ following parameter spaces. As a metric I used 'accuracy':
 | max_features | 'log2' | 
 | max_depth | [6, 21] with steps of 2 | 
 | bootstrap | False | 
+| min_samples_lead | 5 | 
 
 The resulting best values were these: 
 
@@ -119,11 +120,10 @@ the parameters like this:
 | cross-validated | 0.865 | 
 | test | 0.859 |
 
-11719   716
-1579    2267
+![](visuals/after_grid_confusion_matrix.png)
 
-Matthews corrcoef: 0.585
-roc auc score: .766
+![](visuals/after_grid_roc.png)
+
 
 The confusion matrix shows that the model is not really better
 at classifying true positives. I thought it possible that this 
@@ -135,7 +135,7 @@ So I went looking for balanced-related hyperparameters to tune.
 I altered the class_weight parameter, along with the best model values resulting from 
 the grid search. 
 
-class_weight | set type | accuracy score | roc | matthew coefficient
+class_weight | set type | accuracy score | roc | matthew coefficient |
 |:-----:|:--------:|:-----:|:---:|:-----:|
 |None | train | 0.902 | 0.766 | 0.585 |
 | None | test | 0.860 | 0.766 | 0.585 |
