@@ -96,5 +96,6 @@ if __name__ == '__main__':
     print_score(best_model_balanced, X_train, y_train, 'train')
     print_score(best_model_balanced, X_test, y_test, 'test')
     show_confusion_matrix(best_model_balanced, X_test, y_test, 'class_weight=balanced')
+    plot_roc_curve(best_model, X_test, y_test)
     plot_roc_curve(best_model_balanced, X_test, y_test)
     plt.show()
