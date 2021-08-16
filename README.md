@@ -53,9 +53,13 @@ https://github.com/becodeorg/GNT-Arai-2.31/tree/master/content/additional_resour
 First step of the project is to run a default Random Forest classifier over the train set and predict
 the test set. In the rest of the project I will try to better this score.
 
-| Classifier model  | Base accuracy score      |
-|------------------------|---------------------|
-| RandomForestClassifier | 0,8504391622136233  | 
+| Classifier model  | Accuracy score      | Set type | Random state | 
+|------------------------|:----------------:|:-----:|:--------------:|
+| RandomForrestClassifier | 0,99%  | train | 42 | 
+| RandomForestClassifier | 0,85% | test  | 42 |
+
+The model is overfitting: 
+![](visuals/randomforest_default_score_test_train.png)
 
 Looking at the confusion matrix, it is clear that the prediction of class 1 (income higher than 50k) can 
 still do a lot better: 
@@ -64,53 +68,12 @@ still do a lot better:
 
 ### first improvement: cross-validation
 
+Cross-validation on the train set leads to a less overfitted accuracy score. 
 
 |cross validation score | number of folds  | standard deviation |
 |-----------------------|------------------|--------------------|
-|   85.69%              |        10        |     +/- 0.35       |
+|   85.82%              |        10        |     +/- 0.50       |
 
-
-[comment]: <> (![]&#40;visuals/Exp_24_RPM_reading_error.png&#41;)
-
-[comment]: <> (| Column name of feature | Change made                             | Reason                                                                                                                        |)
-
-[comment]: <> (|------------------------|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|)
-
-[comment]: <> (| timestamp              | Only keeping rows equal to or below 1,5 | We found that the biggest differences between it being a bad or good bearing,  could be found in the first parts of the test.  <br>With the use of plotting, we discovered a cut off point. |)
-
-[comment]: <> (![]&#40;visuals/beginning_vibrations_x_exp_nr_98.png&#41;)
-
-[comment]: <> (![]&#40;visuals/strip_vibrations_x_exp_nr_107.png&#41;)
-
-[comment]: <> (![]&#40;visuals/strip_vibrations_x_exp_nr_2.png&#41;)
-
-
-[comment]: <> (| Column names of feature | Changes made                                                            | Reason                                                                                                      |)
-
-[comment]: <> (|-------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|)
-
-[comment]: <> (| a1_x  <br>a1_y  <br>a1_z  <br>a2_x  <br>a2_y  <br>a2_z | For every "experiment_id", took the mean of every column mentioned. <br>For every row, changed the value in every column mentioned to its mean. | The model had an easier time of fitting and was still able to make accurate predictions with these changes. |)
-
-
-[comment]: <> (## Visuals)
-
-[comment]: <> (### Machine used to gather the data on bearings)
-
-[comment]: <> (![]&#40;visuals/bearing_test_machine.jpg&#41;)
-
-[comment]: <> (### Plot showing the min-max-difference of every axis, on every bearing.)
-
-[comment]: <> (![]&#40;visuals/vibration_spread_differences_on_all_axes.png&#41;)
-
-[comment]: <> (### Plot that gave us the idea to look into the first seconds.)
-
-[comment]: <> (![]&#40;visuals/control_vs_good_vs_bad_Y_Speed_Hz.png&#41;)
-
-[comment]: <> (### Plot that showed possible clusters)
-
-[comment]: <> (Ready for future exploration)
-
-[comment]: <> (![]&#40;visuals/scatter_cluster_ready.png&#41;)
 
 ## Contributors
 | Name                  | Github                                 |
